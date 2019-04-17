@@ -1,15 +1,25 @@
 import React from "react"
-import TodoItem from "./components/ToDoItem"
+import ToDoItem from "./components/ToDoItem"
+import todosData from "./ToDoData"
 
 function App() {
-    return (
-        <div className="todo-list">
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-        </div>
+
+  const tasks = todosData.map(function(task) {
+    return(
+      <ToDoItem 
+
+      key = {task.id}
+      chore = {task}
+      />
     )
+    
+  })
+
+  return (
+      <div className="todo-list">
+        {tasks}
+      </div>
+  )
 }
 
 export default App
