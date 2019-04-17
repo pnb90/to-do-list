@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/phuocbui90/Desktop/Actualize/to-do-list"
+		}
+	],
+
+  "syntax_override": {
+      "\\.html$": ["Handlebars", "grammars", "Handlebars"],
+      "\\.js$": ["Babel", "JavaScript (Babel)"]
+  }
+}
