@@ -1,10 +1,11 @@
 import React from 'react';
 
-function ToDoItem() {
+function ToDoItem(props) {
   return(
-    <div className="todo-item">
-      <input type="checkbox"/>
-      <p>Do the dishes</p>
+    <div>
+      <input type="checkbox" checked={props.chore.completed}/>
+      <span style={{textDecoration: props.chore.completed && "line-through"}}>{props.chore.text}</span>
+      <hr/>
     </div>
   )
 }
