@@ -3,8 +3,12 @@ import React from 'react';
 function ToDoItem(props) {
   return(
     <div>
-      <input type="checkbox" checked={props.chore.completed}/>
-      <span style={{textDecoration: props.chore.completed && "line-through"}}>{props.chore.text}</span>
+      <input 
+          type="checkbox" 
+          checked={props.item.completed}
+          onChange={() => props.handleChange(props.item.id)}
+          />
+      <span>{props.item.text}</span>
       <hr/>
     </div>
   )
